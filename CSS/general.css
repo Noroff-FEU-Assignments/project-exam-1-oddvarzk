@@ -1,0 +1,30 @@
+.header{
+    margin: 0;
+    background-color: black;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+
+    padding-left: 50px;
+    padding-right: 70px;
+}
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.header-logo{
+    height: 80px;
+}
+.header-text{
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+}
+
+.header-text:hover{
+    text-decoration-line: underline;
+}
+.right-side-header{
+    padding-top: 30px;
+}
