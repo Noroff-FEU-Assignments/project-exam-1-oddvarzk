@@ -1,7 +1,7 @@
 .header{
     margin: 0;
-    background-color: black;
-    height: 80px;
+    background-color: rgb(35, 37, 49);
+    height: 50px;
     display: flex;
     justify-content: space-between;
 
@@ -14,7 +14,7 @@ body{
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 .header-logo{
-    height: 80px;
+    height: 50px;
 }
 .header-text{
     text-decoration: none;
@@ -26,5 +26,57 @@ body{
     text-decoration-line: underline;
 }
 .right-side-header{
-    padding-top: 30px;
+    font-size: 15px;
+    font-weight: 300;
+    padding-top: 15px;
+}
+.footer{
+    background-color: rgb(35, 37, 49);
+}
+.footer-image-container{
+    display: flex;
+    justify-content: center;
+}
+nav,
+#menu-checkbox{
+    display: none;
+}
+
+#menu-checkbox:checked ~ nav {
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    right: 0;
+    left: 0;
+
+    border-top: 1px;
+    border-top-style: solid;
+    border-top-color: rgb(191, 148, 86);
+    padding-top: 10px;
+
+}
+span{
+    display: none;
+}
+nav a {
+    display: block;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+@media (min-width: 600px) {
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
+    .hamburger-icon{
+        display: none;
+    }
+    .right-side-header{
+        margin-bottom: 2px;
+    }
+}
+.hamburger-icon {
+    color: white;
 }
