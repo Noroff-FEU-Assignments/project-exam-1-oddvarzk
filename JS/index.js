@@ -1,4 +1,5 @@
 const textContainer = document.querySelector(".newest-blogs-container");
+const carouselWrapper = document.querySelector(".wrapper-container");
 
 const url = "https://www.oddvarkristiansen.no/wp-json/wp/v2/posts/";
 
@@ -24,10 +25,13 @@ async function callApi(){
                                         `
         }
     }
+
     } catch (error) {
         textContainer.innerHTML = message("error", error);
     }
 }
+
+
 
 
 function createPostsElements(textContainer) {
