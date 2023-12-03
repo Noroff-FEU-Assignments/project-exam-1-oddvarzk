@@ -1,3 +1,87 @@
+
+.wrapper-container{
+    display: flex;
+    padding: 0 35px;
+    min-height: 50vh;
+    align-items: center;
+    justify-content: center;
+    background: rgb(35, 37, 49);
+}
+.wrapper{
+    display: flex;
+    max-width: 1200px;
+    position: relative;
+  }
+  .wrapper i{
+    top: 50%;
+    height: 44px;
+    width: 44px;
+    color: rgb(35, 37, 49);
+    cursor: pointer;
+    font-size: 1.15rem;
+    position: absolute;
+    text-align: center;
+    line-height: 44px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+  }
+  .wrapper i:active{
+    transform: translateY(-50%) scale(0.9);
+  }
+  .wrapper i:hover{
+    background: #f2f2f2;
+  }
+  .wrapper i:first-child{
+    left: -22px;
+    display: none;
+  }
+  .wrapper i:last-child{
+    right: -22px;
+  }
+  .wrapper .carousel{
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+  }
+  .carousel.dragging{
+    cursor: grab;
+    scroll-behavior: auto;
+  }
+  .carousel.dragging img{
+    pointer-events: none;
+  }
+  .carousel img{
+    height: 340px;
+    object-fit: cover;
+    user-select: none;
+    margin-left: 14px;
+    width: calc(100% / 4);
+  }
+  .carousel img:first-child{
+    margin-left: 0px;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .carousel img{
+      width: calc(100% / 2);
+    }
+  }
+  
+  @media screen and (max-width: 550px) {
+    .carousel img{
+      width: 100%;
+    }
+  }
+
+
+
+
+
+
 .car-collection-picture{
     width: 100%;
     object-fit: cover;
@@ -6,6 +90,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(48%,200px));
     column-gap: 30px;
+    justify-content: center;
 
     margin-top: 2%;
     margin-left: 5%;
@@ -39,7 +124,7 @@
     scroll-behavior: smooth;
 
     margin-top: 50px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 .blog-container{
     padding: 0;
@@ -140,6 +225,7 @@
 
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(30%,300px));
+    gap: 20px;
     justify-content: center;
 }
 .see-more-blogs-button{
@@ -147,7 +233,7 @@
     justify-content: center;
 
     font-weight: 500;
-    opacity: 0.5;
+    opacity: 0.7;
 
     margin-bottom: 60px;
     margin-top: 20px;
@@ -160,4 +246,30 @@
 .see-more-blogs-box-text{
     text-decoration: none;
     color: black;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.newest-blog-h3{
+    margin: 0;
+    font-weight: 500;
+    position: relative;
+}
+
+.newest-blogs-container p{
+    display: none;
+}
+.image-blog-article-container{
+    display: grid;
+    grid-template-columns: 1fr;
+
+    text-indent: -9999px;
+    white-space: nowrap;               
+}
+.image-blog-article-container img{
+    width: 200px;
+    height: 150px;
+    grid-row-start: 1;
+    grid-column-start: 1;
 }

@@ -1,10 +1,9 @@
 .header{
     margin: 0;
     background-color: rgb(35, 37, 49);
-    height: 50px;
+    height: 80px;
     display: flex;
     justify-content: space-between;
-
     padding-left: 50px;
     padding-right: 70px;
 }
@@ -14,11 +13,13 @@ body{
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 .header-logo{
-    height: 50px;
+    height: 80px;
 }
 .header-text{
     text-decoration: none;
     color: white;
+    font-size: 20px;
+    margin-top: 8px;
     margin-left: 20px;
 }
 
@@ -32,6 +33,7 @@ body{
 }
 .footer{
     background-color: rgb(35, 37, 49);
+    position: relative;
 }
 .footer-image-container{
     display: flex;
@@ -51,8 +53,10 @@ nav,
 
     border-top: 1px;
     border-top-style: solid;
-    border-top-color: rgb(191, 148, 86);
+    border-top-color: rgb(35, 37, 49);
+    background-color: rgb(35, 37, 49);
     padding-top: 10px;
+    padding-bottom: 10px;
 
 }
 span{
